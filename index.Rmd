@@ -1,11 +1,11 @@
 ---
-title: "Human Development Disparities and Convergence across Districts"
-subtitle: "Evidence from Indonesian Regions 2010-2017"
-author: "Ragdad Cani Miranti <br /> Carlos Mendez <br /><br />GSID, Nagoya University, JAPAN <br />"
-date: "Prepared for the 10th Asia Conference of Regional Science <br />[slides available at: https://project2019e.netlify.app]"
+title: "Human Development Disparities and Convergence across Districts of Indonesia"
+subtitle: "A Spatial Economic Approach"
+author: "Ragdad Cani Miranti   <br />  Carlos Mendez <br /><br />Graduate School of International Development <br /> Nagoya University, Japan <br />"
+date: "Prepared for the Tenth Asian Conference in Regional Science <br />October 11st 2020<br />[slides available at: https://project2019b.netlify.app]"
 output:
   xaringan::moon_reader:
-    css: ["default", "metropolis-fonts", "metropolis"]
+    css: ["default", "metropolis-fonts", "svm-xaringan-style.css"]
     lib_dir: libs
     nature:
       highlightStyle: github
@@ -14,294 +14,309 @@ output:
 ---
 
 ```{r setup, include=FALSE}
-library(xaringan)
 options(htmltools.dir.version = FALSE)
 ```
 
 
 ## Motivation:
 
-- there is limited research about decentralization in Indonesia that has provided a conclusive answer on the regional income disparity dynamics.
-- Scarce academic literature on convergence at the district level in Indonesia. 
+-  UNDP reports Indonesia ranked 111 out of 189 countries in 2019.
+- The insular geography of Indonesia and its largely unbalanced geographic distribution of natural resources and population
+- There are relative few studies that evaluate the role of spatial effects on the
+process of regional convergence.
+- Scarce academic literature on human development convergence at the district level in Indonesia. 
+
   
 ## Research Question:
   
-- **To what extent the role of space affects the convergence dynamics across Indonesian regions?**
+- Does convergence take place on the convergence process of human development across districts in Indonesia?
 
+- To what extent the role of space affects the convergence on human development across Indonesian regions?
+
+  
 ## Methods:
 
 - Classical convergence framework (Barro and Sala-i-Martin 1992)
-and  Distributional convergence framework (Quah 1996; Hyndman et. al 1996)
-- Spatial autocorrelation (Moran's I and differential Moran's I)
-- Getis Filter (Getis 1995)
+- Spatial autocorrelation (Moran's I and LISA)
+- Spatial autoregressive models (Spatial Lag and Spatial Error Model)
+
+## Data:
+
+- Human Development Index and its components 2010-2018 at district level 
 
 
 
 ---
-# Main Results
+
+class: middle
+
+## Main Results:
 
 1. **Significant Spatial Autocorrelation** at the district level. 
 
-2. **Distributional Convergence** 
+2. **Regional Convergence** 
 
-  - For provinces, there are 4 convergence clubs.
-  - For districts high mobility in the upper tail of the distribution.
-  
-3. **Filtered data ** 
+  - At district level, convergence is taking place on the growth process of human development and almost all components.
 
-  - High mobility on the filtered distribution.
-  - Faster convergence speed for filtered data.
+3. **Spatial effects**
   
-4. **Spatial effects**
-  
-  - Spatial effects are reducing the speed convergence of income at the district level.
+  - Spatial effects are increasing the speed convergence of human development and its components at the district level.
 
-5. **Policy Implication**
+4. **Policy Implication**
 
-  - Increasing the effectiveness of local government's policies and coordination among regions.
-  
+  - Increasing spatially better coordination and cooperation between local governments and authorities in designing development plans.
+
+
 ---
+
 class: middle
 
 # Outline of this presentation
 
-1. **Introduction and Data**
-
-  - Does decentralization promote regional development? 
-  - A newly constructed data-set
+1. **Introduction** and **Data**
 
 2. **Spatial autocorrelation** 
 
   - Standard Moran's I
-  - Differential Moran's I
+  - Local Indicators of Spatial Autocorrelation
 
-3. **Spatial Filtering Perspectives** 
-
-  - Distributional Dynamic Framework 
-  - Getis Spatial Filter
+3. **Cross-sectional Convergence Model** 
+  - Speed of convergence
+  - Half-life
     
-4. **Income dynamic transition across districts and provinces **
+4. **Cross-sectional Spatial Convergence Model **
+  - Spatial dependence test in the residuals
+  - Spatial Lag and Spatial Error Coefficient
+  - Direct and Indirect Effects
 
-5. **The filtered data and spatial effects**
-  
-6. **Concluding Remarks**
+5. **Concluding Remarks**
+
+
+
+<br />
+<br />
+[ Slides and paper available at: https://project2019b.netlify.app ]
+
+---
+
+class: center, middle
+
+# (1) Some stylized facts
+
+**Human development disparity across islands and sitricts over time**
+
+**Socio economic indicators disparities across districts over time**
 
 
 ---
-class: middle
+
+class: middle,center
+
+#Human Development Dispersion over time
+
+![](figs/plot1.png)
+
+
+---
+
+class: middle,center
+
+#Human Development Dispersion over time
+
+![](figs/plot2.png)
+---
+
+class: middle,center
+
+## Human Development Dispersion over time
+
+![](figs/violin chart.png)
+
+---
+
+class: middle,center
+
+## Human Development 
+
+![](figs/descriptive.png)
+
+
+## Human Development 
+![](figs/outlier.png)
+---
+
+class: middle,center
 
 # (1) Data
-- The centroid coordinates of the capital cities of the districts.
 
-<img src="figs/01_map_districs.PNG" style="width: 45%"  class="center" />
-
-- A balanced dataset (districs interpolation). Income per capita for 34 provinces and 514 districts over the 2010-2017 period.
-
-
-.pull-left[
-
-<img src="figs/01_quantile_2010.PNG" style="width: 90%" />
-]
-
-.pull-right[
-
-<img src="figs/01_quantile_2017.PNG" style="width: 90%" />
-
-]
-
-
-
----
-
-class: middle
-
-# (1) Introduction: 
-##Decentralization to promote regional growth
-
-- After the implementation of decentralization in 2000, the number of provinces and districts (cities and regencies) increased significantly.
-
-- Local governments are granted a greater political autonomy and substantial responsibilities for administration and public services provision.
-
-<img src="figs/Intro.PNG" style="width: 80%" />
+- Data of human development index and its three dimensions from 514 districts over 2010-2018 period
+- The health dimension is represented by a indicator of life expectancy.
+- The education dimension is represented by two indicators: literacy rate and mean years of schooling. 
+- The decent standard of living dimension is represented by per-capita expenditure.
+- All data are derived from National Socio-Economic Survey, conducted by Central Bureau Statistics of Indonesia (BPS-Statistics Indonesia)
 
 ---
 class: middle
 
-# (2) Spatial Autocorrelation : 
+# (2) Convergence framework 
 
-##Moran's I and Differential Moran's I
+**Sigma Convergence**
 
-$$I = \frac{\sum_i\sum_j w_{ij} z_i.z_j}{\sum_i z_i^2} = \frac{\sum_i (z_i \times \sum_j w_{ij} z_j)}{\sum_i z_i^2}.$$
+**Unconditional beta convergence** 
 
-- It captures the relationship of a variable in one location with the spatially weighted average of values at neighboring locations.
-
-- The differential Moran's I is conducted to evaluate the robustness. 
- 
- <img src="figs/moran.PNG" style="width: 90%" />
----
-
-# Spatial Autocorrelation Moran's I 
-
-- For provincial data the Moran’s I statistic was **not statistically different from 0** for all years. 
-- At the district level there are **Strong signs of positive spatial autocorrelation**
-- The Moran's I is significant **for all years** from 2010-2017 and the differential Moran's I is significant from 2013
-
-<img src="figs/04_moran.PNG" style="width: 65%" />
+**Speed of convergence and half-life**
 
 
 ---
+class: middle
 
-# (3) Spatial Filtering Perspective
+# Convergence framework (Brief Overview)
 
-<img src="figs/getis.PNG" style="width: 90%" />
- 
-- **A spatial filtering of the data can help us to avoid misguided interpretation**.
+## Sigma Convergence
 
-- Instead of using spatial regressions we can remove the spatial component of socio-economic variables and used t filtered data in regular regressions.
+$$\begin{array}{c}
+\sigma_{t}=\sqrt{\frac{1}{N-1} \sum_{i=1}^{N}\left(\log \left(y_{i, t}\right)-\overline{\log \left(y_{t}\right)}\right)^{2}} \\
+\sigma^{2}=\frac{\sigma_{u}^{2}}{1-e^{-2 \beta}}
+\end{array}$$
+
+## Beta Convergence
+
+- The classical unconditional convergence framework of Barro and
+Sala-I-Martin (1992),
+
+$$\log \left(\frac{y_{i, t+T}}{y_{i t}}\right)=\gamma-\left(1-e^{-\beta T}\right) \log y_{i t}+\varepsilon_{i}$$
+- Based on the speed of convergence (b), a second parameter of interest can
+be computed as
+
+$$\text {half-life}=\frac{\log 2}{\beta}$$
 
 ---
 class: middle, center
-# (3) Distribution Dynamics Framework
+
+# Beta Convergence Scatter Plot
+
+![](figs/betaconv.png)
+
+---
+class: middle, center
+# Convergence results
+
+![](figs/Tab1.png)
+![](figs/note.png)
+---
+class: middle, center
 
 
-<img src="figs/dyst.PNG" style="width: 70%" />
+# (3) Spatial Autocorrelation
+
+Global Spatial Autocorrelation : Moran's I Statistics
+
+Local Indicators of Spatial Autocorrelation (LISA)
 
 
 ---
-# Intra-distribution dynamics
+class: middle, center
 
-## Is the income ranking changing over time?
+# Evolution of Moran's I statistics and standard deviation over 2010-2018 
 
-- Each  curve  refers to the income levels  at a given point in time 2010, 2013 and 2017.
+![](figs/Fig04.png)
+Notes: Regional disparities (right axis) are measured based on the standard deviation of the log of each variable. Global spatial autocorrelation (left axis) is measured based on the Moran’s I, which is statistically significant at 5% level for all years.
 
-- The lowest curve shows the cross-
-section  of  regions  in 2010 in increasing  order (income ranking from the lowest to the highest) 
+---
+class: middle, center
 
+# Local Indicators of Spatial Autocorrelation (LISA)
 
+## Initial period (2010)
 
-.pull-left[
-
-##Provinces 
-
-![](figs/cross2.png)
-]
-
-.pull-right[
-## Districts 
-![](figs/cross1.png)
-]
+![](figs/fig05.png)
 
 
 ---
-# (4) Income dynamics for districts
+class: middle, center
 
-- Low mobility in the bottom of the distribution, the relatively poor remain relatively poor...
+# Local Indicators of Spatial Autocorrelation (LISA)
 
-- High mobility in the upper tail of the distribution
+## Final period (2018)
 
-.pull-left[
-
-![](figs/dis1.png)
-]
-
-.pull-right[
-
-![](figs/dis2.png)
-]
+![](figs/fig06.png)
+**The East-West dichotomy has been a persistent feature of the Indonesian economy and still present in 2018**
 
 ---
-# (4) Income dynamics - provinces 
+class: middle, center
 
-*Since Spatial autocorrelation is not significant for provinces just distributional and classical convergence analysis are reported.*
+# (4) Cross-sectional Spatial Convergence model
 
-.pull-left[
+Spatial Lag Model (SLM) and Spatial Error Model (SEM)
 
-![](figs/pro1.png)
-]
+Direct and Indirect Effects
 
-.pull-right[
-
-**There are at least 2 convergence clubs, 
-two in the upper tail and 2 in the middle of the distribution**  
-
-![](figs/pro2.png)
-]
-
+Goodness of Fit Test ( AIC and BIC)
 
 
 ---
-# (5) Filtered income dynamics 
+class: middle, center
 
--  Distributional convergence and clusters for the **filtered income variable**
-- The regions whit income over 20 times the average income un time t had income of just over 15 in time t+5
+# Spatial Lag Model (SLM) and Spatial Error Model (SEM)
 
+**Intuition : Interactions among geographical neighbors can affect the speed of convergence
+of the entire regional system**
 
+## Spatial Lag Model
 
-.pull-left[
+$$\ln \left(\frac{y_{i, t+T}}{y_{i t}}\right)=\gamma-\left(1-e^{-\beta T}\right) \log y_{i t}+\rho \mathbf{W} \ln \left(\frac{y_{i, t+T}}{y_{i t}}\right)+\varepsilon_{i}$$
+## Spatial Error Model (SEM)
 
-
-
-![](figs/fil1.png)
-]
-
-.pull-right[
-
-
-![](figs/fil2.png)
-]
-
+$$\ln \left(\frac{y_{i, t+T}}{y_{i t}}\right)=\gamma-\left(1-e^{-\beta T}\right) \log y_{i t}+(\mathbf{I}-\lambda \mathbf{W})^{-1} \varepsilon_{i}$$
 
 ---
 
-# (5) Classical convergence results 
+class: middle
 
+# Spatial Error Model (SEM)
 
-.pull-left[
-
-
-
-![](figs/beta1.png)
-]
-
-.pull-right[
-
-
-![](figs/beta2.png)
-]
-
-<img src="figs/table1.PNG" style="width: 100%" />
-
-
+$$\ln \left(\frac{y_{i, t+T}}{y_{i t}}\right)=\gamma-\left(1-e^{-\beta T}\right) \log y_{i t}+(\mathbf{I}-\lambda \mathbf{W})^{-1} \varepsilon_{i}$$
 ---
-# (6) Concluding Remarks
 
-## Inequality still matters  :
+class: middle
 
-- Low mobility for the poorest districts and provinces.
-- The convergence speed is below the standard in the regional literature for provinces. 
-- Spatial effects are reducing the pace of convergence at the district level.
+# Spatial Convergence Results
 
-## Implications 
+
+
+
+# (5) Concluding Remarks
+
+- **Inequality still matters**. The development gap between the East and West of Indonesia is still persistent.
+- Spatial effects are accelerating the pace of convergence at the district level.
+- Faster convergence in education-related variables tend to accelerate the speed of convergence of human development.
+- 
+
+# Implications and further research
 
 - To spatially filter regional income is important in order to avoid misleading interpretations.
 - Call for better coordination of regional policies at the cluster level.
 - Enhance inter-regional connectivity and cooperation. 
 - Geography matters! breaking spatial barriers and the infrastructure and capabilities required for it must be on top of the policy agenda.
+- Next extension: spatial panel data models could be implemented to control for unobserved heterogeneity.
+
 
 
 ---
-class: center
-# Thanks!
 
-** Thank you very much for your attention**
+class: center, middle
 
-QuaRCS lab website 
-https://quarcs-lab.rbind.io/
-
- <img src="figs/logo2.png" style="width: 40%" />
-
-**Quantitative Regional and Computational Science Lab**
+# Thank you very much for your attention
 
 
+Slides and working paper available at: https://project2019b.netlify.app]
+
+![](figs/QuaRCS-lab-logo2.png)
+
+**Quantitative Regional and Computational Science lab**
+
+https://quarcs-lab.rbind.io
+
+***
 
 
