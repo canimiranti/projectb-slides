@@ -1,6 +1,6 @@
 ---
 title: "Human Development Disparities and Convergence across Districts of Indonesia"
-subtitle: "A Spatial Economic Approach"
+subtitle: "A Spatial Econometric Approach"
 author: "Ragdad Cani Miranti   <br />  Carlos Mendez <br /><br />Graduate School of International Development <br /> Nagoya University, Japan <br />"
 date: "Prepared for the Tenth Asian Conference in Regional Science <br />October 11st 2020<br />[slides available at: https://projectb-slides-2020.netlify.app]"
 output:
