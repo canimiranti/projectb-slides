@@ -15,7 +15,7 @@ class: center, middle, inverse, title-slide
 # Human Development Disparities and Convergence across Districts of Indonesia
 ## A Spatial Economic Approach
 ### Ragdad Cani Miranti <br /> Carlos Mendez <br /><br />Graduate School of International Development <br /> Nagoya University, Japan <br />
-### Prepared for the Tenth Asian Conference in Regional Science <br />October 11st 2020<br />[slides available at: <a href="https://project2019b.netlify.app" class="uri">https://project2019b.netlify.app</a>]
+### Prepared for the Tenth Asian Conference in Regional Science <br />October 11st 2020<br />[slides available at: <a href="https://projectb-slides-2020.netlify.app" class="uri">https://projectb-slides-2020.netlify.app</a>]
 
 ---
 
@@ -100,7 +100,7 @@ class: middle
 
 &lt;br /&gt;
 &lt;br /&gt;
-[ Slides and paper available at: https://project2019b.netlify.app ]
+[ Slides and paper available at: https://projectb-slides-2020.netlify.app ]
 
 ---
 
@@ -108,7 +108,7 @@ class: center, middle
 
 # (1) Some stylized facts
 
-**Human development disparity across islands and sitricts over time**
+**Human development disparity across islands and districts over time**
 
 **Socio economic indicators disparities across districts over time**
 
@@ -117,23 +117,25 @@ class: center, middle
 
 class: middle,center
 
-#Human Development Dispersion over time
+#Education indicators vs HDI across districts over time
 
 ![](figs/plot1.png)
-
+**Note: X-axis reflects mean years of schooling, Y-axis reflects expected years of schooling, human development index is reflected by the dot size and name of island is reflected by the dot color** 
 
 ---
 
 class: middle,center
 
-#Human Development Dispersion over time
+#Health and decent standard of living indicator vs HDI across districts over time
 
 ![](figs/plot2.png)
+**Note: X-axis reflects life expectancy, Y-axis reflects expenditure per capita, human development index is reflected by the dot size and name of island is reflected by the dot color** 
+
 ---
 
 class: middle,center
 
-## Human Development Dispersion over time
+# Violin Chart of Human Development Index Dispersion across Islands in Indonesia
 
 ![](figs/violin chart.png)
 
@@ -141,24 +143,30 @@ class: middle,center
 
 class: middle,center
 
-## Human Development 
+## Statistics Summary of Human Development Index and Its Components across 514 districts
 
 ![](figs/descriptive.png)
+![](figs/source.png)
 
-
-## Human Development 
+## Extreme Value of Observations
 ![](figs/outlier.png)
+![](figs/source.png)
+
 ---
 
 class: middle,center
 
 # (1) Data
 
-- Data of human development index and its three dimensions from 514 districts over 2010-2018 period
-- The health dimension is represented by a indicator of life expectancy.
-- The education dimension is represented by two indicators: literacy rate and mean years of schooling. 
-- The decent standard of living dimension is represented by per-capita expenditure.
-- All data are derived from National Socio-Economic Survey, conducted by Central Bureau Statistics of Indonesia (BPS-Statistics Indonesia)
+Data of human development index and its three dimensions from 514 districts over 2010-2018 period
+
+The health dimension is represented by an indicator of life expectancy.
+
+The education dimension is represented by two indicators: expected years of schooling and mean years of schooling. 
+
+The decent standard of living dimension is represented by per capita expenditure.
+
+All data are derived from National Socio-Economic Survey, conducted by Central Bureau Statistics of Indonesia (BPS-Statistics Indonesia)
 
 ---
 class: middle
@@ -198,10 +206,10 @@ be computed as
 ---
 class: middle, center
 
-# Beta Convergence Scatter Plot
+# Beta Convergence Plot
 
 ![](figs/betaconv.png)
-
+**Note:** Figures above indicate inverse relationship between the (log) initial level of human development and its components and the subsequent growth rate of each of those.
 ---
 class: middle, center
 # Convergence results
@@ -225,7 +233,7 @@ class: middle, center
 # Evolution of Moran's I statistics and standard deviation over 2010-2018 
 
 ![](figs/Fig04.png)
-Notes: Regional disparities (right axis) are measured based on the standard deviation of the log of each variable. Global spatial autocorrelation (left axis) is measured based on the Moran’s I, which is statistically significant at 5% level for all years.
+Notes: Regional disparities (right Y-axis) are measured based on the standard deviation of the log of each variable. Global spatial autocorrelation (left Y-axis) is measured based on the Moran’s I, which is statistically significant at 5% level for all years.
 
 ---
 class: middle, center
@@ -235,7 +243,7 @@ class: middle, center
 ## Initial period (2010)
 
 ![](figs/fig05.png)
-
+**Note** : Local spatial dependence is significant for both spatial clusters and spatial outliers at 5% significance level
 
 ---
 class: middle, center
@@ -245,7 +253,11 @@ class: middle, center
 ## Final period (2018)
 
 ![](figs/fig06.png)
+**Note** : Local spatial dependence is significant for both spatial clusters and spatial outliers at 5% significance level
+
+***
 **The East-West dichotomy has been a persistent feature of the Indonesian economy and still present in 2018**
+***
 
 ---
 class: middle, center
@@ -267,6 +279,8 @@ class: middle, center
 **Intuition : Interactions among geographical neighbors can affect the speed of convergence
 of the entire regional system**
 
+** Two prominent models under this specification : SLM and SEM**
+
 ## Spatial Lag Model
 
 `$$\ln \left(\frac{y_{i, t+T}}{y_{i t}}\right)=\gamma-\left(1-e^{-\beta T}\right) \log y_{i t}+\rho \mathbf{W} \ln \left(\frac{y_{i, t+T}}{y_{i t}}\right)+\varepsilon_{i}$$`
@@ -278,32 +292,60 @@ of the entire regional system**
 
 class: middle
 
-# Spatial Error Model (SEM)
+# Spatial Convergence Models (1)
 
-`$$\ln \left(\frac{y_{i, t+T}}{y_{i t}}\right)=\gamma-\left(1-e^{-\beta T}\right) \log y_{i t}+(\mathbf{I}-\lambda \mathbf{W})^{-1} \varepsilon_{i}$$`
+## Human Development Index
+![](figs/hdi.png)
+
 ---
 
 class: middle
 
-# Spatial Convergence Results
+# Spatial Convergence Models (2) 
+
+## Life Expectancy
+.pull-left[
+![](figs/LE.png)
+]
 
 
+## per Capita Expenditure
+.pull-right[
+![](figs/CE.png)
 
+]
 
+---
+
+class: middle
+
+# Direct and Indirect Effect
+
+.pull-left[
+![](figs/effect1.png)
+]
+
+.pull-right[
+![](figs/effect2.png)
+]
+---
+
+class: middle
 # (5) Concluding Remarks
 
-- **Inequality still matters**. The development gap between the East and West of Indonesia is still persistent.
+- **Inequality still matters**. The West-East polarization are still becoming the persistent feature of Indonesia's economic and social development.
+- Increasing spatial dependence is associated with decreasing regional disparities
+and faster regional convergence
 - Spatial effects are accelerating the pace of convergence at the district level.
-- Faster convergence in education-related variables tend to accelerate the speed of convergence of human development.
-- 
+- Without role of space, faster convergence in education-related variables tend to accelerate the speed of convergence of human development.
+- With role of space, only health and economic related variables tend to accelerate the speed of convergence of human development.
 
 # Implications and further research
 
-- To spatially filter regional income is important in order to avoid misleading interpretations.
-- Call for better coordination of regional policies at the cluster level.
+- Call for better coordination of regional policies at the DISTRICT level.
 - Enhance inter-regional connectivity and cooperation. 
-- Geography matters! breaking spatial barriers and the infrastructure and capabilities required for it must be on top of the policy agenda.
-- Next extension: spatial panel data models could be implemented to control for unobserved heterogeneity.
+- Geography matters! breaking spatial barriers, improving infrastructure and human capabilities required  must be on top of the policy agenda.
+- Next extension: spatial panel and dynamic panel models could be implemented to control for unobserved heterogeneity.On the other hand, extension of spatial lag and error model like Spatial Durbin Model and Kelejian and Prucha model (SAC) might be proposed on the upcoming research.
 
 
 
@@ -314,7 +356,7 @@ class: center, middle
 # Thank you very much for your attention
 
 
-Slides and working paper available at: https://project2019b.netlify.app]
+Slides and working paper available at: https://projectb-slides-2020.netlify.app]
 
 ![](figs/QuaRCS-lab-logo2.png)
 
